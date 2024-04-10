@@ -7,9 +7,9 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 project_name = "multlingual"
 
 list_of_files = [
-    f"src/__init__.py",
-    f"src/helper.py",
-    f"research/trials.ipynb",
+    "src/__init__.py",
+    "src/helper.py",
+    "research/trials.ipynb",
     ".env",
     "app.py",
     "requirements.txt",
