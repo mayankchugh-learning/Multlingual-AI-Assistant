@@ -25,7 +25,10 @@ docker pull ubuntu
 
 ## Create and start docker container interactive and detach with code mapping for ubuntu image
 ```bash
-docker run -dit -p 8501:8501 ubuntu /bin/bash
+docker run -dit -p 8501:8501  --device /dev/snd:/dev/snd  ubuntu /bin/bash 
+
+docker run -dit -p 8501:8501  -v /dev/snd:/dev/snd --privileged  --device /dev/snd:/dev/snd  ubuntu /bin/bash 
+
 ```
 
 ## to list all containers 
@@ -36,6 +39,8 @@ docker ps -a
 ## to go into docker conatiner 
 ```bash
 docker exec -it <container_id> /bin/bash
+
+docker exec -it 2326780c07ee /bin/bash
 ```
 
 ## update container
@@ -49,43 +54,42 @@ apt-get upgrade -y
 ```bash
 apt install git curl unzip tar make sudo vim wget nano -y
 ```
-# choose you region and country when prompt
-
-apt install python3-pip
 
 ## install python      
 ```bash
-apt-get install python3
+apt install python3-pip
 ```
-
-## install pip      
-```bash
-apt-get install pip -y
-```
-
-
 
 ## git clone
 ```bash
-git clone https://github.com/entbappy/Multilingual-AI-Assistant.git
+git clone https://github.com/mayankchugh-learning/Multlingual-AI-Assistant.git
 ```
 
 ## change directory to clonned repository
 ```bash
-cd Industry-Safety-Detection-using-Yolov7
+cd Multlingual-AI-Assistant
 ```
 
 
+## install PyAudio on Ubuntu
+```bash
+apt install portaudio19-dev
+```
 
-sudo apt install portaudio19-dev
+```bash
 python3 -m  pip install PyAudio
+```
+
+## install PyAudio on MAC
+```bash
+brew install portaudio
+python3 -m  pip install PyAudio
+```
 
 ## install all requirement
 ```bash
 pip3 install -r requirements.txt
 ```
-
-
 
 ## execute application
 
@@ -113,21 +117,9 @@ docker exec -it <container_id> /bin/bash
 
 https://docs.docker.com/engine/reference/commandline/image/#examples
 
-
 ## to list all images
 ```bash
 docker image ls
-```
-
-# docker command line interface (cli)
-
-```bash
-https://docs.docker.com/engine/reference/commandline/
-
-
- AWS_ACCESS_KEY_ID=
- AWS_SECRET_ACCESS_KEY=
- AWS_DEFAULT_REGION=
 ```
 
 ## to stop all running container (reference only)
@@ -166,4 +158,12 @@ https://docs.docker.com/compose/
 https://docs.docker.com/engine/reference/builder/#run
 ```
 
+# port checking and kill process
+```bash
+lsof -i:8501 
+lsof -ti:8501
 
+kill -9 PID
+
+kill -9 $(lsof -ti:8501) 
+```
