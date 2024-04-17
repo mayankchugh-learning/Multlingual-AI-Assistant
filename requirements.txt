@@ -1,5 +1,6 @@
 SpeechRecognition
 pipwin
+portaudio19-dev
 pyaudio
 gTTS
 google-generativeai
