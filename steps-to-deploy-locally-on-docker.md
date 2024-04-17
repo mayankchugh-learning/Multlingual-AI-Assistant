@@ -40,7 +40,7 @@ docker ps -a
 ```bash
 docker exec -it <container_id> /bin/bash
 
-docker exec -it 2326780c07ee /bin/bash
+docker exec -it 32999a2a65ff /bin/bash
 ```
 
 ## update container
@@ -53,6 +53,9 @@ apt-get upgrade -y
 ## install mutliple softwares
 ```bash
 apt install git curl unzip tar make sudo vim wget nano -y
+```
+```bash
+apt-get install flac
 ```
 
 ## install python      
