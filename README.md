@@ -14,11 +14,11 @@ git push origin main
 ## How to run? 
 ### STEP 01- Create a conda environment after opening the repository
 ```bash
-conda create -p multlingual python=3.8 -y
+conda create -p multlingual python -y
 ```
 
 ```bash
-conda activate multlingual
+source activate ./multlingual
 ```
 
 ### STEP 02- install the requirements
