@@ -54,11 +54,9 @@ open up localhost:
 - Python
 - Google API
 - Streamlit
-- PaLM2
+- Google Gemini-Pro
 - s2t
 - t2s
-
-
 
 # How to Deploy Streamlit app on EC2 instance
 

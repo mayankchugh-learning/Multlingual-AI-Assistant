@@ -41,6 +41,17 @@ def text_to_speech(text):
 
 
 
+def llm_model_object(user_text):
+    genai.configure(api_key=GOOGLE_API_KEY)
+    
+    model = genai.GenerativeModel('gemini-pro')
+    
+    response=model.generate_content(user_text)
+    
+    result=response.text
+    
+    return result
+    
 
 
 # def llm_model_object(user_text):
@@ -60,15 +71,4 @@ def text_to_speech(text):
 
 
 
-def llm_model_object(user_text):
-    genai.configure(api_key=GOOGLE_API_KEY)
-    
-    model = genai.GenerativeModel('gemini-pro')
-    
-    response=model.generate_content(user_text)
-    
-    result=response.text
-    
-    return result
-    
 
