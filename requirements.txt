@@ -1,13 +1,11 @@
 SpeechRecognition
 pipwin
-portaudio19-dev
 pyaudio
 gTTS
 google-generativeai
 python-dotenv
 streamlit
 -e .
-
 
 
 # Its solved you need Python 3.10 to work close this issue now.
